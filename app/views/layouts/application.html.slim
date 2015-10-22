@@ -7,4 +7,20 @@ html
     = csrf_meta_tags
 
   body
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand href="/" ToDo Sample App
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              =link_to 'Sign In', root_path
+            li
+              =link_to 'Register', root_path
+      
     = yield

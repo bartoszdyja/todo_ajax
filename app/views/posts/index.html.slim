@@ -17,7 +17,7 @@
         =simple_form_for(@post, remote: true) do |f|
           =f.input :title, class: 'post_title'
           =f.input :content, class: 'post_content'
-          =f.submit
+          =f.submit class: 'btn btn-success'
       .modal-footer
         button type='button' class='btn btn-default' data-dismiss='modal' Close
       /<div class="modal-content">
