@@ -1,0 +1,8 @@
+.col-md-4.panel
+  .panel-heading
+    h1 =post.title
+  .panel-body
+    p =post.content
+  .panel-footer
+    =link_to 'Destroy', post, method: :delete, class: 'btn btn-danger' 
+

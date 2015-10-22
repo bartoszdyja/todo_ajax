@@ -2,7 +2,12 @@
   .row
     .text-center
       button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#my_modal' New Post
-  / Modal
+  #my_counter=@posts.count
+
+  .row
+    .text-center#my_posts
+      =render @posts
+/ Modal
 .modal.fade#my_modal
   .modal-dialog
     .modal-content
@@ -10,8 +15,8 @@
         This is modal header
       .modal-body
         =simple_form_for(@post, remote: true) do |f|
-          =f.input :title
-          =f.input :content
+          =f.input :title, class: 'post_title'
+          =f.input :content, class: 'post_content'
           =f.submit
       .modal-footer
         button type='button' class='btn btn-default' data-dismiss='modal' Close
